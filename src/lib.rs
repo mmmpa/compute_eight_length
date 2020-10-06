@@ -8,6 +8,26 @@ pub fn compute_eight_length(src: usize) -> usize {
     }
 }
 
+struct ComputedEightLength(usize);
+
+impl From<usize> for ComputedEightLength {
+    fn from(n: usize) -> Self {
+        Self(compute_eight_length(n))
+    }
+}
+
+impl Into<usize> for ComputedEightLength {
+    fn into(self) -> usize {
+        self.0
+    }
+}
+
+impl AsRef<usize> for ComputedEightLength {
+    fn as_ref(&self) -> &usize {
+        &self.0
+    }
+}
+
 mod test {
     #[allow(unused_imports)]
     use crate::compute_eight_length;
