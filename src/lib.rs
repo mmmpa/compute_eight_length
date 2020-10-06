@@ -10,6 +10,12 @@ pub fn compute_eight_length(src: usize) -> usize {
 
 pub struct ComputedEightLength(usize);
 
+impl ComputedEightLength {
+    pub fn from_computed(n: usize) -> Self {
+        Self(n)
+    }
+}
+
 impl From<usize> for ComputedEightLength {
     fn from(n: usize) -> Self {
         Self(compute_eight_length(n))
