@@ -8,7 +8,7 @@ pub fn compute_eight_length(src: usize) -> usize {
     }
 }
 
-struct ComputedEightLength(usize);
+pub struct ComputedEightLength(usize);
 
 impl From<usize> for ComputedEightLength {
     fn from(n: usize) -> Self {
