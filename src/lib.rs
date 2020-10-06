@@ -8,6 +8,7 @@ pub fn compute_eight_length(src: usize) -> usize {
     }
 }
 
+#[derive(Debug, Default, Copy, Clone)]
 pub struct ComputedEightLength(usize);
 
 impl ComputedEightLength {
